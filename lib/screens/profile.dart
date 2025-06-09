@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:Fashan/utils/constants.dart';
-import 'package:Fashan/utils/app_theme.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:clothing_ecom_app_flutter/utils/constants.dart';
+import 'package:clothing_ecom_app_flutter/utils/app_theme.dart';
+import 'package:flutter_custom_tabs/flutter_custom_tabs.dart';
 
 class ProfileDrawer extends StatelessWidget {
   const ProfileDrawer({super.key});
@@ -11,55 +11,114 @@ class ProfileDrawer extends StatelessWidget {
     return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
-        children: <Widget>[
+        children: [
+          // Custom DrawerHeader with zero padding/margin
           DrawerHeader(
-            decoration: const BoxDecoration(
-              color: primaryColor,
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                const CircleAvatar(
-                  radius: 50.0,
-                  backgroundImage: AssetImage('assets/images/qambar.png'),
-                ),
-                const Text(
-                  'Qambar Abbas',
-                  style: TextStyle(
-                    fontSize: 25.0,
-                    fontFamily: 'Pacifico',
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
+            margin: EdgeInsets.zero,
+            padding: EdgeInsets.zero,
+            decoration: const BoxDecoration(color: primaryColor),
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: const [
+                  CircleAvatar(
+                    radius: 40,
+                    backgroundImage:
+                    AssetImage('assets/images/qambar.png'),
                   ),
-                ),
-                Text(
-                  'Android Developer'.toUpperCase(),
-                  style: TextStyle(
-                    fontSize: 20.0,
-                    fontFamily: 'SourceSansPro',
-                    color: Colors.teal.shade100,
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: 2.5,
+                  SizedBox(height: 8),
+                  Text(
+                    'Qambar Abbas',
+                    style: TextStyle(
+                      fontSize: 22,
+                      fontFamily: 'Pacifico',
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
                   ),
-                ),
-              ],
+                  SizedBox(height: 4),
+                  Text(
+                    'ANDROID DEVELOPER',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontFamily: 'SourceSansPro',
+                      color: Colors.tealAccent,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 2.0,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
-          const CardTile(
+
+          // Your list tiles...
+          CardTile(
             icon: Icons.phone_outlined,
             title: '+91 8510842558',
-            onTapUrl: 'tel:+91 8510842558',
+            onTap: () =>
+                _showCopyDialog(context, 'Phone Number', '+91 8510842558'),
           ),
-          const CardTile(
+          CardTile(
             icon: Icons.account_circle_outlined,
             title: 'LinkedIn Qambar Abbas',
-            onTapUrl: 'https://www.linkedin.com/in/qambar-abbas-500438307',
+            onTap: () => _launchWeb(
+                context, 'https://www.linkedin.com/in/qambar-abbas-500438307'),
           ),
-          const CardTile(
+          CardTile(
             icon: Icons.email_outlined,
             title: 'qambarofficial313@gmail.com',
-            onTapUrl:
-                'mailto:qambarofficial313@gmail.com?subject=Need Flutter developer&body=Please contact me',
+            onTap: () => _showCopyDialog(
+              context,
+              'Email',
+              'qambarofficial313@gmail.com\n\nSubject: Need Flutter developer\nBody: Please contact me',
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Future<void> _launchWeb(BuildContext context, String urlStr) async {
+    final uri = Uri.parse(urlStr);
+    final theme = Theme.of(context);
+    try {
+      await launchUrl(
+        uri,
+        customTabsOptions: CustomTabsOptions(
+          colorSchemes: CustomTabsColorSchemes.defaults(
+            toolbarColor: theme.primaryColor,
+          ),
+          shareState: CustomTabsShareState.on,
+          urlBarHidingEnabled: true,
+          showTitle: true,
+          closeButton: CustomTabsCloseButton(
+            icon: CustomTabsCloseButtonIcons.back,
+          ),
+        ),
+        safariVCOptions: SafariViewControllerOptions(
+          preferredBarTintColor: theme.primaryColor,
+          preferredControlTintColor: theme.colorScheme.onPrimary,
+          barCollapsingEnabled: true,
+          dismissButtonStyle: SafariViewControllerDismissButtonStyle.close,
+        ),
+      );
+    } catch (_) {
+      _showCopyDialog(context, 'Error', 'Could not open the link.');
+    }
+  }
+
+  void _showCopyDialog(BuildContext context, String title, String content) {
+    showDialog(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: Text(title),
+        content: SelectableText(content),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(ctx),
+            child: const Text('Close'),
           ),
         ],
       ),
@@ -70,33 +129,21 @@ class ProfileDrawer extends StatelessWidget {
 class CardTile extends StatelessWidget {
   final IconData icon;
   final String title;
-  final String onTapUrl;
+  final VoidCallback onTap;
 
   const CardTile({
     super.key,
     required this.icon,
     required this.title,
-    required this.onTapUrl,
+    required this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      onTap: () => _launchURL(onTapUrl),
+      onTap: onTap,
       leading: Icon(icon, color: Colors.teal),
-      title: Text(
-        title,
-        style: TextStyle(color: Colors.teal.shade900),
-      ),
+      title: Text(title, style: TextStyle(color: Colors.teal.shade900)),
     );
-  }
-
-  Future<void> _launchURL(String urlString) async {
-    final Uri url = Uri.parse(urlString);
-    if (await canLaunchUrl(url)) {
-      await launchUrl(url);
-    } else {
-      throw 'Could not launch $url';
-    }
   }
 }

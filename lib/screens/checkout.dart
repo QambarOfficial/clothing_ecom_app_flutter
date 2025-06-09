@@ -1,11 +1,11 @@
+import 'package:clothing_ecom_app_flutter/screens/thankyou.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:line_icons/line_icons.dart';
-import 'package:Fashan/screens/thankyou.dart';
-import 'package:Fashan/widget/reuseable_button.dart';
-import 'package:Fashan/utils/constants.dart';
-import 'package:Fashan/model/base_model.dart';
 import '../data/app_data.dart';
+import '../model/base_model.dart';
+import '../utils/constants.dart';
+import '../widget/reuseable_button.dart';
 
 class Checkout extends StatefulWidget {
   final Map<String, dynamic>? selectedAddress;

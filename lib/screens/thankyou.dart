@@ -1,5 +1,5 @@
-import 'package:Fashan/main_wrapper.dart';
-import 'package:Fashan/widget/reuseable_button.dart';
+import 'package:clothing_ecom_app_flutter/main_wrapper.dart';
+import 'package:clothing_ecom_app_flutter/widget/reuseable_button.dart';
 import 'package:flutter/material.dart';
 
 class ThankYouPage extends StatefulWidget {

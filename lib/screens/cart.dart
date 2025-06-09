@@ -1,6 +1,4 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:Fashan/screens/address.dart';
-import 'package:Fashan/screens/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:line_icons/line_icons.dart';
@@ -10,6 +8,7 @@ import '../main_wrapper.dart';
 import '../model/base_model.dart';
 import '../utils/constants.dart';
 import '../widget/reuseable_button.dart';
+import 'address.dart';
 
 class Cart extends StatefulWidget {
   const Cart({super.key});
