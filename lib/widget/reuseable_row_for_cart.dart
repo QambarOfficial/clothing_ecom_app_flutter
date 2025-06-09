@@ -21,7 +21,7 @@ class ReuseableRowForCart extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(text,
-              style: textTheme.headline5
+              style: textTheme.headlineSmall
                   ?.copyWith(color: Colors.grey, fontSize: 16)),
           ReuseableText(
             price: price,
