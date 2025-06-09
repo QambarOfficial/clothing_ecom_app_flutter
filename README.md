@@ -1,6 +1,6 @@
 # Flutter Clothing E‑Commerce App
 
-![App Banner](screenshots/banner.png)
+![App Banner](https://img.icons8.com/?size=100&id=5pu47piHKg1I&format=png&color=000000)
 
 A polished, Flutter‑based e‑commerce app for browsing and purchasing clothing items. Built with:
 
@@ -52,9 +52,9 @@ A polished, Flutter‑based e‑commerce app for browsing and purchasing clothin
 
 ## 📸 Screenshots
 
-![image alt] (https://github.com/QambarOfficial/clothing_ecom_app_flutter/blob/8a518616a10c79c509e55bea0b8dd684540af27f/screenshots/Screenshot_20250609_114246.png)
+![Image Alt] (https://github.com/QambarOfficial/clothing_ecom_app_flutter/blob/8a518616a10c79c509e55bea0b8dd684540af27f/screenshots/Screenshot_20250609_114246.png)
 
-![image alt] (https://github.com/QambarOfficial/clothing_ecom_app_flutter/blob/8a518616a10c79c509e55bea0b8dd684540af27f/screenshots/Screenshot_20250609_114318.png)
+![Image Alt] (https://github.com/QambarOfficial/clothing_ecom_app_flutter/blob/8a518616a10c79c509e55bea0b8dd684540af27f/screenshots/Screenshot_20250609_114318.png)
 
 ![image alt] (https://github.com/QambarOfficial/clothing_ecom_app_flutter/blob/8a518616a10c79c509e55bea0b8dd684540af27f/screenshots/Screenshot_20250609_114339.png)
 
