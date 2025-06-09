@@ -1,6 +1,6 @@
 # Flutter Clothing E‑Commerce App
 
-![App Banner](https://img.icons8.com/?size=100&id=5pu47piHKg1I&format=png&color=000000)
+![App Banner](screenshots/banner.png)
 
 A polished, Flutter‑based e‑commerce app for browsing and purchasing clothing items. Built with:
 
@@ -52,19 +52,14 @@ A polished, Flutter‑based e‑commerce app for browsing and purchasing clothin
 
 ## 📸 Screenshots
 
-![Image Alt](https://github.com/QambarOfficial/clothing_ecom_app_flutter/blob/8a518616a10c79c509e55bea0b8dd684540af27f/screenshots/Screenshot_20250609_114246.png)
-
-![Image Alt](https://github.com/QambarOfficial/clothing_ecom_app_flutter/blob/8a518616a10c79c509e55bea0b8dd684540af27f/screenshots/Screenshot_20250609_114318.png)
-
-![image alt](https://github.com/QambarOfficial/clothing_ecom_app_flutter/blob/8a518616a10c79c509e55bea0b8dd684540af27f/screenshots/Screenshot_20250609_114339.png)
-
-![image alt](https://github.com/QambarOfficial/clothing_ecom_app_flutter/blob/8a518616a10c79c509e55bea0b8dd684540af27f/screenshots/Screenshot_20250609_114356.png)
-
-![image alt](https://github.com/QambarOfficial/clothing_ecom_app_flutter/blob/8a518616a10c79c509e55bea0b8dd684540af27f/screenshots/Screenshot_20250609_115649.png)
-
-![image alt](https://github.com/QambarOfficial/clothing_ecom_app_flutter/blob/8a518616a10c79c509e55bea0b8dd684540af27f/screenshots/Screenshot_20250609_115704.png)
-
-
+<p align="center">
+  <img src="https://github.com/QambarOfficial/clothing_ecom_app_flutter/blob/8a518616a10c79c509e55bea0b8dd684540af27f/screenshots/Screenshot_20250609_114246.png" alt="Home Screen" width="200" />
+  <img src="https://github.com/QambarOfficial/clothing_ecom_app_flutter/blob/8a518616a10c79c509e55bea0b8dd684540af27f/screenshots/Screenshot_20250609_114318.png" alt="Product Details" width="200" />
+  <img src="https://github.com/QambarOfficial/clothing_ecom_app_flutter/blob/8a518616a10c79c509e55bea0b8dd684540af27f/screenshots/Screenshot_20250609_114339.png" alt="Cart Checkout" width="200" />
+  <img src="https://github.com/QambarOfficial/clothing_ecom_app_flutter/blob/8a518616a10c79c509e55bea0b8dd684540af27f/screenshots/Screenshot_20250609_114356.png" alt="Profile Drawer" width="200" />
+  <img src="https://github.com/QambarOfficial/clothing_ecom_app_flutter/blob/8a518616a10c79c509e55bea0b8dd684540af27f/screenshots/Screenshot_20250609_115649.png" alt="Checkout Flow" width="200" />
+  <img src="https://github.com/QambarOfficial/clothing_ecom_app_flutter/blob/8a518616a10c79c509e55bea0b8dd684540af27f/screenshots/Screenshot_20250609_115704.png" alt="Order History" width="200" />
+</p>
 
 ---
 
